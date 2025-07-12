@@ -4,6 +4,7 @@
 :root::-webkit-scrollbar {
   display: none;
 }
+
 /*{
   
   font-family: Gilroy-Medium;
@@ -17,16 +18,19 @@
   background-color: #ffffff;
   border-bottom-color: #ebebeb;
 }
+
 .headerlogo {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10.111px;
 }
+
 .but {
   display: flex;
   gap: 12px;
 }
+
 .getstartbtn {
   border-radius: 10px;
   background: #5978ff;
@@ -36,30 +40,33 @@
   /* justify-content: center;
   align-items: center; */
   gap: 8px;
-  color: var(--Blue-On-Primary, #fff);
+  color: #fff;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
 }
+
 .loginbtn {
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: 10px;
-  border: 1px solid var(--Primary-Primary, #5978ff);
-  background: var(--Primary-On-Primary, #fff);
-  color: var(--Primary-Primary, #5978ff);
+  border: 1px solid #5978ff;
+  background: #f7f9ff;
+  color: #5978ff;
 
   /* Body 2 (14px)/Medium */
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
+  /* 142.857% */
 }
+
 .navge {
   font-family: "Poppins";
   font-size: 16px;
@@ -73,25 +80,30 @@
   /* align-items: center; */
   /* justify-content: center; */
 }
+
 #section1 {
   display: flex;
   padding: 137.07px 110.73px;
-  background: var(--Primary-Primary-Container, #f7f9ff);
+  background: #f7f9ff;
   justify-content: space-between;
 }
+
 .textpara {
   width: 545px;
   height: 462px;
   align-items: flex-start;
 }
+
 .infotext {
   display: flex;
   gap: 16px;
 }
+
 .join {
   display: flex;
   gap: 12px;
 }
+
 .exploreadvisors_btn {
   display: inline-flex;
   padding: 17px 36px;
@@ -102,22 +114,25 @@
   background: #5978ff;
   border: none;
   color: #ffffff;
-  color: var(--Blue-On-Primary, #fff);
+  color: #fff;
   font-family: "Gilroy-SemiBold";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
+
 .ratingstar {
   display: flex;
   gap: 6px;
 }
+
 .illstart1 {
   position: relative;
   width: 520.004px;
   height: 425.004px;
 }
+
 .rating {
   position: absolute;
   bottom: 4px;
@@ -141,6 +156,7 @@ width: 198px; */
   flex-direction: column;
   justify-content: center;
 }
+
 .video {
   display: flex;
   justify-content: space-between;
@@ -152,12 +168,14 @@ width: 198px; */
   height: 525px;
   flex-shrink: 0;
   border-radius: 12px 12px 0 0;
-  background: var(--Primary-On-Primary-Container, #0d1226);
+  background: #0d1226;
 }
+
 .firstbox {
   width: 287px;
   height: 191px;
 }
+
 .sectiontitle {
   padding: 100px 182px;
   display: grid;
@@ -165,43 +183,50 @@ width: 198px; */
   column-gap: 71px;
   row-gap: 80px;
 }
+
 .sectioncounter {
   display: flex;
   justify-content: center;
 }
+
 .firstboxtitle {
-  color: var(--Text-Primary-Text, #121214);
+  color: #121214;
   font-family: Gilroy-SemiBold;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
+
 .firstboxtext {
-  color: var(--Text-Secondary-Text, #555);
+  color: #555;
   font-family: Gilroy-Medium;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
+
 .headtext {
-  color: var(--Text-Primary-Text, #121214);
+  color: #121214;
   text-align: center;
   font-family: Gilroy-Bold;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: 37px; /* 132.143% */
+  line-height: 37px;
+  /* 132.143% */
   text-transform: capitalize;
   padding-top: 100px;
 }
+
 #section3 {
-  background: var(--Primary-Primary-Container, #f7f9ff);
+  background: #f7f9ff;
   position: relative;
 }
+
 .paratext {
-  color: var(--Text-Primary-Text, #121214);
+  color: #121214;
   font-family: Gilroy-Medium;
   font-size: 18px;
   margin-top: 13px;
@@ -211,47 +236,50 @@ width: 198px; */
   height: 96px;
   margin-top: 13px;
 }
+
 .navgenon {
-  color: var(--Text-Secondary-Text, #555);
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px;
+  color: #555;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
 }
+
 .dots {
   position: absolute;
   margin-left: 6px;
   top: 1660px;
 }
+
 .card {
   width: 320px;
   border-radius: 12px;
-  border: 1px solid var(--Outlines-Outline-Variant-2, #f5f5f5);
+  border: 1px solid #f5f5f5;
   background: #ffffff;
   padding-bottom: 20px;
   box-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.04);
 }
+
 .discount {
   display: flex;
   justify-content: space-between;
-  
+
   margin-left: 8px;
   margin-right: 8px;
   padding: 10px;
   border-radius: 12px;
   background: #f7f9ff;
- 
+
 }
+
 .offer {
   width: 272px;
   height: 32px;
   border-radius: 8px 0px 0px 8px;
-  background: linear-gradient(
-    90deg,
-    rgba(248, 151, 31, 0.12) 0%,
-    rgba(248, 248, 248, 0.24) 96.14%
-  );
+  background: linear-gradient(90deg,
+      rgba(248, 151, 31, 0.12) 0%,
+      rgba(248, 248, 248, 0.24) 96.14%);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -259,26 +287,24 @@ line-height: 22px;
   margin-top: 4px;
   padding: 8px 10px;
 }
-.offertext {
-  display: flex;
-  gap: 3px;
-}
+
 .offertext1 {
-  color: var(--Secondary-On-Secondary-Container, #402708);
+  color: #402708;
   font-family: Gilroy-Medium;
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
   line-height: 16px;
+  gap: 3px;
 }
+
 .offertext2 {
-  color: var(--Secondary-On-Secondary-Container, #402708);
+  color: #402708;
   font-family: Gilroy-SemiBold;
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
   line-height: 16px;
 }
+
 .section4 {
   display: flex;
   height: 782px;
@@ -301,30 +327,34 @@ line-height: 22px;
   align-items: center;
   gap: 10px;
 }
+
 .nameofcard {
-  color: var(--Text-On-Surface, #121214);
+  color: #121214;
   font-family: Gilroy-SemiBold;
   font-size: 16px;
   margin: 0px;
- 
+
 }
+
 .cardname1 {
   display: flex;
-  
+
   margin: 12px 16px 0px 18px;
-  
-  justify-content:space-between ;
+
+  justify-content: space-between;
   align-items: center;
 }
+
 .experience {
   display: flex;
   gap: 8px;
-  margin: 9px 18px ;
+  margin: 9px 18px;
   margin-top: 0;
   margin-bottom: 20px;
-  color:#008545;
- 
+  color: #008545;
+
 }
+
 .bookbtn {
   display: flex;
   width: 80px;
@@ -337,33 +367,56 @@ line-height: 22px;
   background: #5978ff;
   color: #fff;
   border: none;
-  color: var(--Blue-On-Primary, #fff);
+  color: #fff;
   font-family: Gilroy-SemiBold;
   font-size: 14px;
 }
-.years{
-  color: var(--Text-On-Surface-Variant, #555);
+
+.years {
+  color: #555;
   font-family: Gilroy-Medium;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-margin: 0px;
+  margin: 0px;
 }
-.discountpoint{
-  color: var(--Text-Secondary-Text, #555);
+
+.discountpoint {
+  color: #555;
   text-decoration: line-through;
   margin: 0;
-font-size: 12px;
-
+  font-size: 12px;
 }
-.discuntmin{
-  color: var(--Primary-On-Primary-Container, #0D1226);
-font-family: Gilroy-SemiBold;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 22px;
-margin:0;
 
+.discuntmin {
+  color: #0D1226;
+  font-family: Gilroy-SemiBold;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+.totalcard {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 23px;
+}
+
+.explore {
+  display: flex;
+  width: 222px;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.explreconte {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
 }

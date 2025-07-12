@@ -13,7 +13,6 @@ import cardimage2 from "./assets/image/Rectangle 61040 (1).png";
 import cardimage3 from "./assets/image/Rectangle 61040 (2).png";
 import staroffer from "./assets/image/Staroffer.svg";
 import briefcase from "./assets/image/icons8-briefcase 1.svg";
-
 import crown from "./assets/image/icons8-crown (1) 1.svg";
 import dots from "./assets/image/dots.svg";
 import youtubeicon from "./assets/image/icons8-youtube-logo 1.svg";
@@ -23,7 +22,95 @@ import growth from "./assets/image/icons8-financial-growth-analysis 1.svg";
 import crisis from "./assets/image/icons8-financial-crisis 1.svg";
 import profit from "./assets/image/icons8-profit 1.svg";
 import charity from "./assets/image/icons8-charity 1.svg";
+import arrow from "./assets/image/icons8-right-arrow (4) 1.svg"
 import "./App.css";
+
+const carddata = [{
+  image1: cardimage1,
+  cardname: "Antonio J Redondo Plata",
+  Years: "5",
+  Specialized: "Financial Planning",
+  rating: "4.2",
+  Creditsd: "50",
+  Credits: "45"
+},
+{
+  image1: cardimage2,
+  cardname: "Nancy John Sarikha",
+  Years: "2",
+  Specialized: "Credit Advise",
+  rating: "4.5",
+  Creditsd: "30",
+  Credits: "27"
+},
+{
+  image1: cardimage3,
+  cardname: "Sanjay Dutt",
+  Years: "6",
+  Specialized: "Portfolio Management",
+  rating: "4.2",
+  Creditsd: "50",
+  Credits: "47"
+}
+]
+function Cards(props) {
+
+  return (<div className="cards">
+    <div className="cardscout">
+      <div className="card">
+        <img src={props.image1} style={{ padding: "8px" }} />
+        {/* <div className={props.cardstatus ? "cardstatus":"crdstatus-off"} style={{width: "74px",height: "24px",background:"#ffffff"}}>
+            <p style={{display:"flex",width: "57px",height: "15px",fontSize:"12px",color: "#383E54",textAlign: "center",fontFamily: "Gilroy-SemiBold"}}>
+              Top Rated
+              </p>
+            </div> */}
+        <div className="offer">
+          <img src={crown} style={{ width: "16px", height: "16px" }} />
+          <div className="offertext">
+            <p className="offertext1">Specialized in <span className="offertext2">{props.Specialized}</span></p>
+          </div>
+        </div>
+        <div className="carname">
+          <div className="cardname1">
+            <p className="nameofcard">{props.cardname}</p>
+            <div className="greencard">
+              <img src={staroffer} />
+              <p
+                style={{
+                  color: "#ffffff",
+                  textAlign: "center",
+                  fontFamily: "Poppins",
+                  fontSize: "12px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "16px",
+                }}
+              >
+                {" "}
+                4.2
+              </p>
+            </div>
+          </div>
+          <div className="ratingcard"></div>
+          <div className="experience">
+            <img src={briefcase} />
+            <p className="years">{props.Years} Years Experience</p>
+          </div>
+          <div className="discount">
+            <div className="creditscont">
+              <p className="discountpoint">{props.Creditsd} credits</p>
+              <p className="discuntmin">{props.Credits} Credits /Min</p>
+            </div>
+            <button className="bookbtn">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  )
+}
+
+
 
 function App() {
   return (
@@ -271,57 +358,41 @@ function App() {
           </div>
         </div>
       </div>
-
       <div id="section4">
         {/* <div><img src={hero}/></div> */}
         <p className="headtext">Meet our Advisors!</p>
-        <div className="cardscout">
-          <div className="card">
-            <img src={cardimage1} style={{ padding: "8px" }} />
-            <div className="offer">
-              <img src={crown} style={{ width: "16px", height: "16px" }} />
-              <div className="offertext">
-                <p className="offertext1">Specialized in </p>
-                <p className="offertext2">Financial Planning</p>
-              </div>
-            </div>
-            <div className="carname">
-              <div className="cardname1">
-                <p className="nameofcard">Antonio J Redondo Plata</p>
-                <div className="greencard">
-                  <img src={staroffer} />
-                  <p
-                    style={{
-                      color: "var(--Green-On-Success, #FFF)",
-                      textAlign: "center",
-                      fontFamily: "Poppins",
-                      fontSize: "12px",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "16px",
-                    }}
-                  >
-                    {" "}
-                    4.2
-                  </p>
-                </div>
-              </div>
-              <div className="ratingcard"></div>
-              <div className="experience">
-                <img src={briefcase} />
-                <p className="years">5 Years Experience</p>
-              </div>
-              <div className="discount">
-                <div className="creditscont">
-                  <p className="discountpoint">50 credits</p>
-                  <p className="discuntmin">45 Credits /Min</p>
-                </div>
-                <button className="bookbtn">Book</button>
-              </div>
-            </div>
+        {/* <Cards 
+          image1={cardimage1} 
+          cardname="Antonio J Redondo Plata" 
+          Years="5" 
+          Specialized="Financial Planning" 
+          rating="4.2"  
+          Creditsd="50" 
+          Credits="45"
+        /> */}
+        <div className="totalcard">
+          {
+            carddata.map((user, index) => (
+              <Cards key={index}
+                image1={user.image1}
+                cardname={user.cardname}
+                Years={user.Years}
+                Specialized={user.Specialized}
+                rating={user.rating}
+                Creditsd={user.Creditsd}
+                Credits={user.Credits}
+              />
+            ))
+          }
+        </div>
+        <div className="explreconte">
+          <div className="explore">
+            <p style={{ color: "#5978FF", fontFamily: "Gilroy-SemiBold" }}>Explore More Advisors</p>
+            <img src={arrow} />
           </div>
         </div>
       </div>
+
     </>
   );
 }
