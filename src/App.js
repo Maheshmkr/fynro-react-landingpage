@@ -23,7 +23,11 @@ import crisis from "./assets/image/icons8-financial-crisis 1.svg";
 import profit from "./assets/image/icons8-profit 1.svg";
 import charity from "./assets/image/icons8-charity 1.svg";
 import arrow from "./assets/image/icons8-right-arrow (4) 1.svg";
-import stepill from "./assets/image/Frame 1000003954.svg";
+import stepill from "./assets/image/Frame 1000003954.jpg";
+import profile1 from './assets/image/logo.svg';
+import profile2 from './assets/image/logo (1).svg';
+import profile3 from './assets/image/logo (2).svg';
+import starts from "./assets/image/Star 1.svg";
 import "./App.css";
 
 const carddata = [{
@@ -54,21 +58,7 @@ const carddata = [{
   Credits: "47"
 }
 ]
-const stepsdata = [{
-  Stepcount: "1",
-  step_rule: "Register",
-  step_details: "Sign up with your basic information in just a few simple steps and get started right away."
-}, {
-  Stepcount: "2",
-  step_rule: "Register",
-  step_details: "Recharge your wallet with flexible plans and connect seamlessly with our expert advisors."
-}, {
-  Stepcount: "3",
-  step_rule: "Explore Advisors",
-  step_details: "Browse through certified experts and connect with the perfect advisor for your needs for you financial clarifications."
-}]
 function Cards(props) {
-
   return (<div className="cards">
     <div className="cardscout">
       <div className="card">
@@ -124,7 +114,19 @@ function Cards(props) {
   )
 }
 
-
+const stepsdata = [{
+  Stepcount: "1",
+  step_rule: "Register",
+  step_details: "Sign up with your basic information in just a few simple steps and get started right away."
+}, {
+  Stepcount: "2",
+  step_rule: "Register",
+  step_details: "Recharge your wallet with flexible plans and connect seamlessly with our expert advisors."
+}, {
+  Stepcount: "3",
+  step_rule: "Explore Advisors",
+  step_details: "Browse through certified experts and connect with the perfect advisor for your needs for you financial clarifications."
+}]
 function Stepframe(props) {
   return (
     <div className="steps" style={{ height: "124px", gap: "8px", height: "124px", width: "491px" }}>
@@ -140,6 +142,48 @@ function Stepframe(props) {
     </div>
   )
 }
+
+
+const costumer = [{
+  customersimage1:profile1,
+  costumername: "Ranjani Andrew",
+  costumerfeedback: "Fynro made managing my finances so simple! My advisor helped me optimize my investments, and I’ve seen incredible growth in just a few months",
+}, {
+  customersimage1:profile2,
+  costumername: "Rajesh Palanisamy",
+  costumerfeedback: "I never thought retirement planning could be this easy. The expert guidance I received gave me complete peace of mind about my future",
+
+}, {
+  customersimage1:profile3,
+  costumername: "Sibi Chakravathy",
+  costumerfeedback: "The personalized advice on credit management was a game-changer. My financial advisor helped me improve my credit score and plan smarter",
+
+}]
+function Customers(props) 
+{
+  return (
+    <div style={{ backgroundColor: "#F0F9FA", padding: "24px", width: "321px", height: "354px", borderRadius: "12px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between",position: "relative" }}>
+                <img src={props.customersimage1} style={{ marginTop: "24px", position: "absolute", top: "-64px" }} />
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "13px" ,marginTop: "82px"}}>
+                <p style={{ margin: "0px", color: "#121214", fontFamily: "Gilroy-SemiBold", fontSize: "20px" }}>
+                  {props.costumername}
+                </p>
+                <p style={{ margin: "0px", color: "#555555", fontFamily: "Gilroy-Medium", fontSize: "16px", textAlign: "center"}}>
+                  {props.costumerfeedback}
+                  </p>
+              </div>
+              <div style={{ display: "flex", height: "24px", justifyContent: "center", width: "50%", alignItems: "flex-start", gap: "4px" }}>
+                <img src={starts} />
+                <img src={starts} />
+                <img src={starts} />
+                <img src={starts} />
+                <img src={starts} />
+
+              </div>
+            </div>
+  )
+}
+
 
 
 function App() {
@@ -389,9 +433,9 @@ function App() {
         </div>
       </div>
 
-      <div id="section4" style={{background: "#F7F9FF"}}>
+      <div id="section4" style={{ background: "#F7F9FF" }}>
         {/* <div><img src={hero}/></div> */}
-        <p className="headtext" style={{margin:"0px"}}>Meet our Advisors!</p>
+        <p className="headtext" style={{ margin: "0px" }}>Meet our Advisors!</p>
         {/* <Cards 
           image1={cardimage1} 
           cardname="Antonio J Redondo Plata" 
@@ -424,44 +468,40 @@ function App() {
         </div>
       </div>
 
-      <div id="section5" style={{marginTop:"89px"}}>
+      <div id="section5" style={{ marginTop: "89px" }}>
         <p style={{ fontFamily: "Gilroy-Bold", fontSize: "28px", display: "flex", justifyContent: "center" }}>Get connected with advisor in just 3 Easy steps</p>
-        <div className="stepframe_two" style={{display: "flex",justifyContent:"center",gap:"94px"}}>
-        <div className="totalsteps" style={{display: "flex",width: "491px",flexDirection: "column",alignItems:"flex-start",gap: "40px"}}>
-          {
-            stepsdata.map((user, index) => (
-              <Stepframe key={index}
-                Stepcount={user.Stepcount}
-                step_rule={user.step_rule}
-                step_details={user.step_details}
-              />
-            ))
-          }
-        </div>
-        <img src={stepill} style={{width: "417px",height: "377px"}}/>
-        
+        <div className="stepframe_two" style={{ display: "flex", justifyContent: "center", gap: "94px", alignItems: "center" }}>
+          <div className="totalsteps" style={{ display: "flex", width: "491px", flexDirection: "column", alignItems: "flex-start", gap: "40px" }}>
+            {
+              stepsdata.map((user, index) => (
+                <Stepframe key={index}
+                  Stepcount={user.Stepcount}
+                  step_rule={user.step_rule}
+                  step_details={user.step_details}
+                />
+              ))
+            }
+          </div>
+          <img src={stepill} style={{ width: "417px", height: "377px" }} />
+
         </div>
       </div>
 
       <div id="section6">
         <div className="feedblock">
-          <p style={{ color: "#121214", fontFamily: "Gilroy-SemiBold",fontSize:"28px",display:"flex",justifyContent:"center"}}>See what our Customers says</p>
-          <div className="feedback_cards">
-            <div className="feedback_count">
-              <p style={{color:"#121214",fontFamily: "Gilroy-SemiBold",fontSize:"20px",display:"flex",justifyContent:"center"}}>Ranjani Andrew</p>
-              <p style={{
-  color:"#555",
-  fontFamily: "Gilroy-Medium",
-  fontSize:"16px",
-  width:"273px",
-  height:"119px",
-  textAlign:"center",
-   margin: "0 auto",
-  padding: "0 10px"
-}}>
-  Fynro made managing my finances so simple! My advisor helped me optimize my investments, and I’ve seen incredible growth in just a few months
-  </p>
-            </div>
+          <p style={{ color: "#121214", fontFamily: "Gilroy-Bold", fontSize: "28px", display: "flex", justifyContent: "center" }}>See what our Customers says</p>
+          <div className="allcostomers" style={{padding: "10px", display: "flex",gap:"20px",display: "flex", justifyContent: "center",marginTop:"100px" }}>
+            {
+              costumer.map((user, index) => (
+                <Customers key={index}
+                customersimage1={user.customersimage1}
+                  costumername={user.costumername}
+                  costumerfeedback={user.costumerfeedback}
+                  
+                />
+              ))
+            }
+            
           </div>
         </div>
 
