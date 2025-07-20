@@ -420,3 +420,21 @@ width: 198px; */
   display: flex;
   justify-content: center;
 }
+.feedblock{
+  height: 546px;
+  display: block;
+  justify-content: center;
+}
+.feedback_count{
+  width: 321px;
+  height: 354px;
+  border-radius: 12px;
+  background: #F0F9FA;
+  display: block;
+  text-align: center;
+}
+.feedback_cards{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

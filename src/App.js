@@ -22,7 +22,8 @@ import growth from "./assets/image/icons8-financial-growth-analysis 1.svg";
 import crisis from "./assets/image/icons8-financial-crisis 1.svg";
 import profit from "./assets/image/icons8-profit 1.svg";
 import charity from "./assets/image/icons8-charity 1.svg";
-import arrow from "./assets/image/icons8-right-arrow (4) 1.svg"
+import arrow from "./assets/image/icons8-right-arrow (4) 1.svg";
+import stepill from "./assets/image/Frame 1000003954.svg";
 import "./App.css";
 
 const carddata = [{
@@ -53,6 +54,19 @@ const carddata = [{
   Credits: "47"
 }
 ]
+const stepsdata = [{
+  Stepcount: "1",
+  step_rule: "Register",
+  step_details: "Sign up with your basic information in just a few simple steps and get started right away."
+}, {
+  Stepcount: "2",
+  step_rule: "Register",
+  step_details: "Recharge your wallet with flexible plans and connect seamlessly with our expert advisors."
+}, {
+  Stepcount: "3",
+  step_rule: "Explore Advisors",
+  step_details: "Browse through certified experts and connect with the perfect advisor for your needs for you financial clarifications."
+}]
 function Cards(props) {
 
   return (<div className="cards">
@@ -110,6 +124,22 @@ function Cards(props) {
   )
 }
 
+
+function Stepframe(props) {
+  return (
+    <div className="steps" style={{ height: "124px", gap: "8px", height: "124px", width: "491px" }}>
+      <div className="step1" style={{ display: "flex", width: "59px", height: "26px", padding: "5px 12px", justifyContent: "center", alignItems: "center", gap: "10px", borderRadius: "24px", background: "#CBF2E0" }}>
+        <p style={{ color: "#008545", fontFamily: "Poppins", fontSize: "12px" }}>{props.Stepcount}</p>
+      </div>
+      <div className="step_conte">
+        <p style={{ color: "#121214", fontFamily: "Gilroy-SemiBold", fontSize: "18px" }}>{props.step_rule}</p>
+      </div>
+      <div className="step_details">
+        <p style={{ color: "#555", fontFamily: "Gilroy-Medium", fontSize: "16px" }}>{props.step_details}</p>
+      </div>
+    </div>
+  )
+}
 
 
 function App() {
@@ -358,9 +388,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="section4">
+
+      <div id="section4" style={{background: "#F7F9FF"}}>
         {/* <div><img src={hero}/></div> */}
-        <p className="headtext">Meet our Advisors!</p>
+        <p className="headtext" style={{margin:"0px"}}>Meet our Advisors!</p>
         {/* <Cards 
           image1={cardimage1} 
           cardname="Antonio J Redondo Plata" 
@@ -391,6 +422,49 @@ function App() {
             <img src={arrow} />
           </div>
         </div>
+      </div>
+
+      <div id="section5" style={{marginTop:"89px"}}>
+        <p style={{ fontFamily: "Gilroy-Bold", fontSize: "28px", display: "flex", justifyContent: "center" }}>Get connected with advisor in just 3 Easy steps</p>
+        <div className="stepframe_two" style={{display: "flex",justifyContent:"center",gap:"94px"}}>
+        <div className="totalsteps" style={{display: "flex",width: "491px",flexDirection: "column",alignItems:"flex-start",gap: "40px"}}>
+          {
+            stepsdata.map((user, index) => (
+              <Stepframe key={index}
+                Stepcount={user.Stepcount}
+                step_rule={user.step_rule}
+                step_details={user.step_details}
+              />
+            ))
+          }
+        </div>
+        <img src={stepill} style={{width: "417px",height: "377px"}}/>
+        
+        </div>
+      </div>
+
+      <div id="section6">
+        <div className="feedblock">
+          <p style={{ color: "#121214", fontFamily: "Gilroy-SemiBold",fontSize:"28px",display:"flex",justifyContent:"center"}}>See what our Customers says</p>
+          <div className="feedback_cards">
+            <div className="feedback_count">
+              <p style={{color:"#121214",fontFamily: "Gilroy-SemiBold",fontSize:"20px",display:"flex",justifyContent:"center"}}>Ranjani Andrew</p>
+              <p style={{
+  color:"#555",
+  fontFamily: "Gilroy-Medium",
+  fontSize:"16px",
+  width:"273px",
+  height:"119px",
+  textAlign:"center",
+   margin: "0 auto",
+  padding: "0 10px"
+}}>
+  Fynro made managing my finances so simple! My advisor helped me optimize my investments, and I’ve seen incredible growth in just a few months
+  </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </>
