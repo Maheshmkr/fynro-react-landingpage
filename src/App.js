@@ -28,6 +28,11 @@ import profile1 from './assets/image/logo.svg';
 import profile2 from './assets/image/logo (1).svg';
 import profile3 from './assets/image/logo (2).svg';
 import starts from "./assets/image/Star 1.svg";
+import dealsimg1 from "./assets/image/Rectangle 61063.png";
+import dealsimg2 from "./assets/image/Rectangle 61064.png";
+import dealsimg3 from "./assets/image/Rectangle 61065.jpg";
+import fflogo from "./assets/image/ffLogo.svg";
+import facebook from "./assets/image/icon_facebook.svg";
 import "./App.css";
 
 const carddata = [{
@@ -145,45 +150,73 @@ function Stepframe(props) {
 
 
 const costumer = [{
-  customersimage1:profile1,
+  customersimage1: profile1,
+  background: "#F0F9FA",
   costumername: "Ranjani Andrew",
   costumerfeedback: "Fynro made managing my finances so simple! My advisor helped me optimize my investments, and I’ve seen incredible growth in just a few months",
 }, {
-  customersimage1:profile2,
+  customersimage1: profile2,
+  background: "#FFF5EC",
   costumername: "Rajesh Palanisamy",
   costumerfeedback: "I never thought retirement planning could be this easy. The expert guidance I received gave me complete peace of mind about my future",
 
 }, {
-  customersimage1:profile3,
+  customersimage1: profile3,
   costumername: "Sibi Chakravathy",
+  background: "#ECF1FB",
   costumerfeedback: "The personalized advice on credit management was a game-changer. My financial advisor helped me improve my credit score and plan smarter",
 
 }]
-function Customers(props) 
-{
+function Customers(props) {
   return (
-    <div style={{ backgroundColor: "#F0F9FA", padding: "24px", width: "321px", height: "354px", borderRadius: "12px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between",position: "relative" }}>
-                <img src={props.customersimage1} style={{ marginTop: "24px", position: "absolute", top: "-64px" }} />
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "13px" ,marginTop: "82px"}}>
-                <p style={{ margin: "0px", color: "#121214", fontFamily: "Gilroy-SemiBold", fontSize: "20px" }}>
-                  {props.costumername}
-                </p>
-                <p style={{ margin: "0px", color: "#555555", fontFamily: "Gilroy-Medium", fontSize: "16px", textAlign: "center"}}>
-                  {props.costumerfeedback}
-                  </p>
-              </div>
-              <div style={{ display: "flex", height: "24px", justifyContent: "center", width: "50%", alignItems: "flex-start", gap: "4px" }}>
-                <img src={starts} />
-                <img src={starts} />
-                <img src={starts} />
-                <img src={starts} />
-                <img src={starts} />
+    <div style={{ backgroundColor: props.background, padding: "24px", width: "321px", height: "354px", borderRadius: "12px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", position: "relative" }}>
+      <img src={props.customersimage1} style={{ marginTop: "24px", position: "absolute", top: "-64px" }} />
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "13px", marginTop: "82px" }}>
+        <p style={{ margin: "0px", color: "#121214", fontFamily: "Gilroy-SemiBold", fontSize: "20px" }}>
+          {props.costumername}
+        </p>
+        <p style={{ margin: "0px", color: "#555555", fontFamily: "Gilroy-Medium", fontSize: "16px", textAlign: "center" }}>
+          {props.costumerfeedback}
+        </p>
+      </div>
+      <div style={{ display: "flex", height: "24px", justifyContent: "center", width: "50%", alignItems: "flex-start", gap: "4px" }}>
+        <img src={starts} />
+        <img src={starts} />
+        <img src={starts} />
+        <img src={starts} />
+        <img src={starts} />
 
-              </div>
-            </div>
+      </div>
+    </div>
   )
 }
 
+const dealsdata = [{
+  image1: dealsimg1,
+  deals1: "50% Off On Credit Management!",
+  deals2: "Limited-time offer for first-time users. Get expert advice on managing your credit efficiently."
+},
+{
+  image1: dealsimg2,
+  deals1: "Free Retirement Planning with 200+ Credits!",
+  deals2: "Claim a complimentary retirement planning session towards a secure and stress-free future today!"
+},
+{
+  image1: dealsimg3,
+  deals1: "Free Personal Finance Session  ",
+  deals2: "Claim a complimentary retirement planning session towards a secure and stress-free future today!"
+}
+]
+function Deals(props) {
+  return (
+    <div className="dealscard">
+      <img src={props.image1} style={{ width: "450px", height: "255px", borderRadius: "12px" }} />
+      <p style={{ margin: "24px 0px 0px 0px", color: "#121214", font: "20px", fontFamily: "Gilroy-SemiBold" }}>{props.deals1}</p>
+      <p style={{ margin: "0px", color: "#555555", font: "16px", fontFamily: "Gilroy-Medium" }}>{props.deals2}</p>
+      <p style={{ margin: "0px", color: "#5978FF", font: "16px", fontFamily: "Gilroy-SemiBold", display: "flex", gap: "8px" }}>Learn More <img src={arrow} /></p>
+    </div>
+  )
+}
 
 
 function App() {
@@ -433,7 +466,11 @@ function App() {
         </div>
       </div>
 
-      <div id="section4" style={{ background: "#F7F9FF" }}>
+      <div id="section4" style={{ 
+        backgroundImage:`url(${hero})`,
+      backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat", }}>
         {/* <div><img src={hero}/></div> */}
         <p className="headtext" style={{ margin: "0px" }}>Meet our Advisors!</p>
         {/* <Cards 
@@ -490,23 +527,82 @@ function App() {
       <div id="section6">
         <div className="feedblock">
           <p style={{ color: "#121214", fontFamily: "Gilroy-Bold", fontSize: "28px", display: "flex", justifyContent: "center" }}>See what our Customers says</p>
-          <div className="allcostomers" style={{padding: "10px", display: "flex",gap:"20px",display: "flex", justifyContent: "center",marginTop:"100px" }}>
+          <div className="allcostomers" style={{ padding: "10px", display: "flex", gap: "20px", display: "flex", justifyContent: "center", marginTop: "100px" }}>
             {
               costumer.map((user, index) => (
                 <Customers key={index}
-                customersimage1={user.customersimage1}
+                  background={user.background}
+                  customersimage1={user.customersimage1}
                   costumername={user.costumername}
                   costumerfeedback={user.costumerfeedback}
-                  
+
                 />
               ))
             }
-            
+
           </div>
         </div>
 
       </div>
 
+      <div id="section7">
+        <p style={{ color: "#121214", fontFamily: "Gilroy-Bold", fontSize: "28px", display: "flex", justifyContent: "center", padding: "100px 0px 0px 0px", margin: "0px" }}>Exclusive Deals This Month!</p>
+        <div className="dealallwrapper">
+        <div className="dealsall">
+          {
+            dealsdata.map((user, index) => (
+              <Deals key={index}
+                image1={user.image1}
+                deals1={user.deals1}
+                deals2={user.deals2}
+
+              />
+            ))
+          }
+
+        </div>
+        </div>
+      </div>
+
+      <div className="section8">
+        <footer style={{ background: "#0D1226", height: "586px", marginTop: "57px" }}>
+          <div className="footerall">
+            <div className="footer1">
+              <div style={{ display: "flex", alignItems: "center", justifyItems: "center", gap: "10px" }}>
+                <img src={fflogo} />
+                <p style={{ fontSize: "18px" }}>Fynro</p>
+              </div>
+              <p style={{ width: "285px", color: "#9497A1" }}>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
+              <div className="linkicon" style={{display: "flex",alignItems: "flex-start",gap:"15px" }}>
+                <img src={facebook} />
+                <img src={facebook} />
+                <img src={facebook} />
+                <img src={facebook} />
+              </div>
+
+            </div>
+            <div className="footer2">
+              <p style={{fontFamily:"Gilroy-SemiBold",color:"#ffffff"}}>Quick links</p>
+              <p>Home</p>
+              <p>Explore Advisors</p>
+              <p>Blogs</p>
+              <p>White Papers</p>
+
+            </div>
+            <div className="footer3">
+              <p style={{fontFamily:"Gilroy-SemiBold",color:"#ffffff"}}>Advisor Portal</p>
+              <p>Become a Advisor</p>
+              <p>Sign in as Advisor</p>
+            </div>
+            <div className="footer4">
+              <p style={{fontFamily:"Gilroy-SemiBold",color:"#ffffff"}}>Cantact info</p>
+              <p>fynro.info.co.us</p>
+              <p>+91 77086-54343</p>
+              <p>1642 Sunrise Avenue, Neelangarai, Chennai , 600115</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }
